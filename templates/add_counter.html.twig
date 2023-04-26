@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Counter App: add counter{% endblock %}
+
+{% block body %}
+    <div class="registration-container">
+        <h1 class="display-6">Add counter</h1>
+        {{ form_start(form)}}
+            <div class="form-label"> {{ form_label(form.name, 'Name') }} </div>
+            {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.name) }} </small>
+            <div class="form-label"> {{ form_label(form.startPoint, 'Start point') }} </div>
+            {{ form_widget(form.startPoint, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.startPoint) }} </small>
+            <div class="form-label"> {{ form_label(form.unit, 'Unit') }} </div>
+            {{ form_widget(form.unit, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.unit) }} </small>
+            <div class="form-label"> {{ form_label(form.price, 'Price') }} </div>
+            {{ form_widget(form.price, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.price) }} </small>
+            <div class="form-label"> {{ form_label(form.currency, 'Currency') }} </div>
+            {{ form_widget(form.currency, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.currency) }} </small>
+            <button type="submit" class="btn add-counter-button mt-3 mb-3 d-grid gap-2 col-12 mx-auto">Add</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

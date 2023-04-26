@@ -1,0 +1,85 @@
+body {
+    background-color: #f1f1f1;
+}
+div.login-bar {
+    background-color: #5a007e;
+    color: #d4d4d4;
+    height: 34px;
+}
+p {
+    color:#686868;
+}
+a.login-bar {
+    color: #ffffff;
+    text-decoration: none;
+}
+a.login-bar:hover {
+    color: #d569ff;
+}
+a.nav-link:hover {
+    color: #d981fc;
+}
+a.link {
+    color: #a500a5;
+    text-decoration: none;
+}
+a.link:hover {
+    color: #7b2c9b;
+}
+svg.bi-speedometer {
+    color: #5a007e;
+}
+div.card-header-counter {
+    background-color: #5a007e;
+    color: #ffffff;
+}
+div.card-counter {
+    border: 1px solid #b1b1b1;
+    box-shadow: 5px 5px 10px #dadada;
+    vertical-align: top;
+}
+div.registration-container {
+    width: 400px;
+}
+button.registration-button, button.add-counter-button {
+    background-color: #5a007e;
+    color: #ffffff;
+}
+button.registration-button:hover, button.add-counter-button:hover {
+    background-color: #9d5db6;
+    color: #ffffff;
+}
+div.registration-container, div.login-container {
+    width: 500px;
+}
+ul, li {
+    list-style-type: none;
+    padding: 0px;
+}
+h1, h2, h3, h4 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+h1.home-page {
+    color: #5a007e;
+    font-weight: bold;
+}
+div.alert, .btn {
+    border-radius: 0px;
+}
+div.form-label {
+    color: #6b6b6b;
+    font-size: 13px;
+    margin: 10px 0px 0px 0px;
+}
+div.login-bar-btn, div.login-bar-info {
+    font-size: 13px;
+    border: 0px;
+    height: 34px;
+}
+div.version {
+    background-color: #f1f1f1;
+    font-size: 12px;
+    color: #838383;
+}

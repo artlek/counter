@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Counter App: login{% endblock %}
+
+{% block body %}
+    <div class="login-container">
+        <h1 class="display-6">Login</h1>
+        {% if error %}
+            <small class="text-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</small>
+        {% endif %}
+        <form action="{{ path('app_login') }}" method="post">
+            <div class="form-label"><label for="username">Email</label></div>
+            <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}">
+            <div class="form-label"><label for="password">Password</label></div>
+            <input type="password" class="form-control" id="password" name="_password">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <button type="submit" class="btn registration-button mt-3 mb-3 d-grid gap-2 col-12 mx-auto">Login</button>
+        </form>
+    </div>
+{% endblock %}

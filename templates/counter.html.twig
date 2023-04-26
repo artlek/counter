@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Counter App: {{ counter.name }} {% endblock %}
+
+{% block body %}
+    <div class="d-flex">
+        <div class="flex-grow-1">
+            <h1 class="display-6">{{ counter.name }}</h1>
+        </div>
+        <div>
+            <a href="/counter/delete/{{ counter.id }}"><button type="button" class="btn btn-danger btn-sm">Delete counter</button></a>
+        </div>
+    </div>
+    <small>total usage: {{ counter.totalUsage }} {{ counter.unit }}</small>
+    <table class="table me-3, my-3">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">date</th>
+                <th scope="col">counter point [{{ counter.unit }}]</th>
+                <th scope="col">periodic usage [{{ counter.unit }}]</th>
+                <th scope="col">price [{{ counter.currency }}]</th>
+                <th scope="col">value [{{ counter.currency }}]</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set no = 0 %}
+            {% for point in points %}
+            {% set no = no + 1 %}  
+            <tr>
+                <td>{{ no }}. </td>
+                <td>{{ point.datetime }}</td>
+                <td>{{ point.countPoint }}</td>
+                <td>{{ point.periodicUsage }}</td>
+                <td>{{ point.price }}</td>
+                <td>{{ point.price * point.periodicUsage }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="registration-container py-4">
+        <h3>Add counter point</h3>
+        {{ form_start(form)}}
+            <div class="form-label"> {{ form_label(form.countPoint, 'Count point') }} </div>
+            {{ form_widget(form.countPoint, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.countPoint) }} </small>
+            <div class="form-label"> {{ form_label(form.price, 'Price') }} </div>
+            {{ form_widget(form.price, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(form.price) }} </small>
+            <button type="submit" class="btn add-counter-button mt-3 mb-3 d-grid gap-2 col-12 mx-auto">Add</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Counter App: Home{% endblock %}
+
+{% block body %}
+    <div class="container-md my-4" style="max-width: 1200px">
+        <h1 class="display-5 home-page">Hello!</h1>
+        <h4 class="display-6">Welcome to Counter App</h4>
+        <p class="lead">
+        Counter App is a simple webapplication to manage counters and meters in your home. It helps to controll usage of your counters.
+        You can add a counter point and the app will show you how many kWhs you used in a period. It also shows what is the cost of consumed electricity.
+        </p>
+        <h4 class="display-6">Login or register</h4>
+        <p class="lead">
+        Firts <a class="link" href="{{ path('app_register') }}">register</a> or 
+        <a class="link" href="{{ path('app_login') }}">login</a> into Counter App.
+        </p>
+        <h4 class="display-6">Add new counter</h4>
+        <p class="lead">
+        Next add new counter on <a class="link" href="{{ path('app_counter_list') }}">counters page</a>. Fill correctly all form fields. 
+        Start point field is current counter usage. Other words it is what your real meter shows at the moment. 
+        Price and currency field is necessary to compute the value of used units. 
+        </p>
+        <h4 class="display-6">Add new counter point</h4>
+        <p class="lead">
+        After that on counter page you will get list of all counter points (for now only with one position). 
+        When you add new counter point app will show another position with periodic usage and value.
+        </p>
+    </div>
+    <div class="fixed-bottom container-md version ps-4 py-1" style="max-width: 1200px">
+        version: {{ app_version }}
+    </div>    
+{% endblock %}

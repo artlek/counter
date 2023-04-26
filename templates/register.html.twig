@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Counter App: register{% endblock %}
+
+{% block body %}
+    <div class="registration-container">
+        <h1 class="display-6">Register</h1>
+        {{ form_start(registrationForm) }}
+            <div class="form-label"> {{ form_label(registrationForm.email, 'Email') }} </div>
+            {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(registrationForm.email) }} </small>
+            <div class="form-label"> {{ form_label(registrationForm.name, 'Name') }} </div>
+            {{ form_widget(registrationForm.name, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(registrationForm.name) }} </small>
+            <div class="form-label"> {{ form_label(registrationForm.plainPassword, 'Password') }} </div>
+            {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+            <small class="text-danger"> {{ form_errors(registrationForm.plainPassword) }} </small>
+            <button type="submit" class="btn registration-button mt-3 mb-3 d-grid gap-2 col-12 mx-auto">Register</button>
+        {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

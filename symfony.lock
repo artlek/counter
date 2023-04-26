@@ -62,7 +62,7 @@
         ]
     },
     "symfony/console": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -74,7 +74,7 @@
         ]
     },
     "symfony/debug-bundle": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -98,7 +98,7 @@
         ]
     },
     "symfony/framework-bundle": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -116,8 +116,17 @@
             "./src/Kernel.php"
         ]
     },
+    "symfony/infobip-mailer": {
+        "version": "6.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.2",
+            "ref": "f8cb34cf32a9e910f843b437317f62e225af3a0a"
+        }
+    },
     "symfony/mailer": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -127,6 +136,15 @@
         "files": [
             "./config/packages/mailer.yaml"
         ]
+    },
+    "symfony/mailgun-mailer": {
+        "version": "6.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.4",
+            "ref": "addcb559b32d9dbb4843826b063565e1b15a2a57"
+        }
     },
     "symfony/maker-bundle": {
         "version": "1.48",
@@ -138,7 +156,7 @@
         }
     },
     "symfony/messenger": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -162,7 +180,7 @@
         ]
     },
     "symfony/notifier": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -189,7 +207,7 @@
         ]
     },
     "symfony/routing": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -202,7 +220,7 @@
         ]
     },
     "symfony/security-bundle": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -214,7 +232,7 @@
         ]
     },
     "symfony/translation": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -227,7 +245,7 @@
         ]
     },
     "symfony/twig-bundle": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -240,7 +258,7 @@
         ]
     },
     "symfony/validator": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -252,7 +270,7 @@
         ]
     },
     "symfony/web-profiler-bundle": {
-        "version": "6.2",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -275,6 +293,9 @@
         "files": [
             "./config/packages/messenger.yaml"
         ]
+    },
+    "symfonycasts/verify-email-bundle": {
+        "version": "v1.13.0"
     },
     "twig/extra-bundle": {
         "version": "v3.5.1"
